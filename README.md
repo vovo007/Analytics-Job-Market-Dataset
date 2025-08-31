@@ -1,6 +1,6 @@
-# Data-Analyst-Dataset
+# Analyst-J0b-Dataset
 
-Vo's real world data analytics job market portfolio.
+This real world data analytics job market portfolio.
 
 During my job search on the data analytics job market. I've found that most employers asked for projects, experience, and education during the hiring process. So I decided to compile all the real world data relating to the data analytics job market into a small project of mine to help other job seekers out there that are having difficulties landing their dream tech job. 
 
