@@ -1,4 +1,4 @@
-# Analyst-J0b-Dataset
+# Analyst-Job-Dataset
 
 This real world data analytics job market portfolio.
 
