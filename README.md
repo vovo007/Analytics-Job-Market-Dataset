@@ -10,4 +10,4 @@ These datas are my findings that should help job seeker navigate the job market.
 
 [Project: Data Analytics Job Market - Google Sheets](https://docs.google.com/spreadsheets/d/1p8cdtake38t07ErRhz5fYOtItuZ23IgeSD8Sdozfn34/edit?gid=0#gid=0)
 -
-[Project: Data Analytics Job Market - ]()
+[Project: Data Analytics Job Market - CREATE Database & Tables]()
