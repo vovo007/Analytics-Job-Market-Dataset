@@ -8,5 +8,5 @@ During my job search on the data analytics job market. I've found that most empl
 
 These datas are my findings that should help job seeker navigate the job market.
 
-1.[Project: Data Analytics Job Market - Google Sheets](https://docs.google.com/spreadsheets/d/1p8cdtake38t07ErRhz5fYOtItuZ23IgeSD8Sdozfn34/edit?gid=0#gid=0)
-2.[Project: Data Analytics Job Market - ]()
+[Project: Data Analytics Job Market - Google Sheets](https://docs.google.com/spreadsheets/d/1p8cdtake38t07ErRhz5fYOtItuZ23IgeSD8Sdozfn34/edit?gid=0#gid=0)
+[Project: Data Analytics Job Market - ]()
