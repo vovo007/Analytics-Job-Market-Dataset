@@ -1,7 +1,73 @@
 /*
 
+Hello shareholders,
+
+Welcome to my Github repository about SQL. Here shareholders that view my Github account can see my queries pulling
+data from SQL relational databases. 
+
 */
 
--- 1. 
--- 2. 
--- 3. "CHALLENGE"
+-- 01. Can you show your shareholders all data from one of the tables in Analytics_Job_Market database?
+
+SELECT 
+    *
+FROM Analytics_Job_Market.Job_Boards;
+
+-- 02. Job Seekers are wondering what's the average salary per job title across the USA. Please round the result to the nearest 2 decimal places. Order by highest to lowest salary. Also add an alias after salary.
+
+SELECT 
+    job_title, 
+    ROUND(AVG(salary), 2) AS Average_US_Analytics_Job_Salary
+FROM Job_Boards
+GROUP BY job_title
+ORDER BY AVG(salary) DESC;
+
+-- 03. "CHALLENGE" Can you show job seekers which data visualization tool is more pupular with employers? Tableau or Power BI? Find the difference in percentage of total. 
+
+SELECT 
+    (SELECT 
+            COUNT(data_visualization)
+        FROM
+            job_boards
+        WHERE
+            data_visualization = 'Power BI') / (SELECT 
+            COUNT(data_visualization)
+        FROM
+            job_boards) * 100.0 AS 'Power BI',
+    (SELECT 
+            COUNT(data_visualization)
+        FROM
+            job_boards
+        WHERE
+            data_visualization = 'Tableau') / (SELECT 
+            COUNT(data_visualization)
+        FROM
+            job_boards) * 100.0 AS 'Tableau';
+
+-- 04. 
+-- 05. "CHALLENGE"
+-- 06. 
+-- 07. 
+-- 08. "CHALLENGE"
+-- 09. 
+-- 10. 
+-- 11. "CHALLENGE"
+-- 12. 
+-- 13. 
+-- 14. "CHALLENGE"
+-- 15. 
+-- 16. 
+-- 17. 
+-- 18. "CHALLENGE"
+-- 19. "CHALLENGE"
+-- 20. "CHALLENGE"
+-- 21. 
+-- 22. 
+-- 23. 
+-- 24. "CHALLENGE"
+-- 25. 
+-- 26. 
+-- 27. "CHALLENGE"
+-- 28. 
+-- 29. 
+-- 30. "CHALLENGE"
