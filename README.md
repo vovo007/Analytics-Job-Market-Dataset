@@ -1,6 +1,6 @@
 # Analyst-Job-Dataset
 
-This data analytics github porfolio is based on real world data found from the job market. I've gathered various job listings from different job board websites like LinkedIn, Indeed, WorkInTexas, and much more sites. Compiling the data found into SQL format, I've created a database with three tables 
+This data analytics github porfolio is based on real world data found from the job market. I've gathered various job listings from different job board websites like LinkedIn, Indeed, WorkInTexas, and much more sites. Compiling the data found into SQL format, I've created a database with three tables featuring all the data from the job market. 
 
 Hello everyone,
 
