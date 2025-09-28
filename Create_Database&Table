@@ -7,7 +7,7 @@ CREATE TABLE Job_Boards(
    Job_Title          VARCHAR(18) NOT NULL,
    Employer           VARCHAR(33) NOT NULL,
    Industry           VARCHAR(25) NOT NULL,
-   Salary             INT  NOT NULL,
+   Salary             FLOAT  NOT NULL,
    Education          VARCHAR(10) NOT NULL,
    Spreadsheet        VARCHAR(15) NOT NULL,
    SQL_Server         VARCHAR(20) NOT NULL,
