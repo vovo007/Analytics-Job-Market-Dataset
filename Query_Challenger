@@ -44,15 +44,88 @@ SELECT
         FROM
             job_boards) * 100.0 AS 'Tableau';
 
--- 04. 
--- 05. "CHALLENGE"
--- 06. 
--- 07. 
--- 08. "CHALLENGE"
--- 09. 
--- 10. 
+-- 04. Can you query job title and salary that is equal or greater than $80,000? Can you also add an aggregate functions and filter by job titles that has more than twenty counts? Some job seekers has a minimum salary expectation due to their bills.
+
+SELECT 
+    Job_title, 
+    COUNT(Job_title)
+FROM job_boards
+WHERE salary >= 80000
+GROUP BY Job_title
+HAVING COUNT(Job_title) > 20;
+
+-- 05. "CHALLENGE" Your manager would like to see all data within a database. Can you join two or more tables together?
+
+SELECT 
+    *
+FROM Job_Boards AS JB
+JOIN Job_Applications AS JA ON JB.Job_ID = JA.Job_ID
+JOIN Job_Seekers AS JS ON JA.Job_Applicant_ID = JS.Job_Applicant_ID;
+
+-- 06. The hiring manager interested in three unique industries. Select any three random industry showing all data.
+
+SELECT 
+    *
+FROM job_boards
+WHERE industry IN ('Staffing and Recruiting' , 'Financial Services', 'Education');
+
+-- 07. Are you able to query the top five states that has the most job listings? Job seekers would like to know which state is best to find analytics jobs.
+
+SELECT 
+    state, 
+    COUNT(state)
+FROM
+    job_boards
+GROUP BY state
+ORDER BY COUNT(state) DESC
+LIMIT 5;
+
+-- 08. "CHALLENGE" Can you write a query to find job candidates that does NOT have SQL, Tableau, and Python skills? The employeer must eliminate job seekers who does not meet the required experience! 
+
+SELECT
+	Job_Applicant_ID,
+	First_Name,
+    Last_Name
+FROM Job_Seekers
+WHERE NOT (SQL_ = "YES") and NOT (Tableau = "YES") and NOT (Python = "YES");
+-- Alternate Query
+SELECT
+	Job_Applicant_ID,
+	First_Name,
+    Last_Name,
+    SQL_,
+    Tableau,
+    Python
+FROM Job_Seekers
+WHERE NOT SQL_ IN ("YES") and NOT Tableau IN ("YES") and NOT Python IN ("YES");
+
+-- 09. What clause allows SQL to result in one unique value? HR would like a list of every unique employer.
+
+SELECT
+DISTINCT Employer
+FROM Job_Boards;
+
+-- 10. How can you check the data types of each column in a table? 
+
+DESCRIBE Job_Boards;
+DESCRIBE Job_Seekers;
+DESCRIBE Job_Applications;
+
 -- 11. "CHALLENGE"
--- 12. 
+
+
+
+-- 12. Which job candidates has 4th to 10th most experience points? HR wants people who has experience but not too much experience.
+
+SELECT
+	First_Name,
+	Last_Name,
+    EX
+FROM Job_Seekers
+ORDER BY EX DESC
+Limit 7
+OFFSET 3;
+
 -- 13. 
 -- 14. "CHALLENGE"
 -- 15. 
