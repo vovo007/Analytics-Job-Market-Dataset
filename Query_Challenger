@@ -85,7 +85,10 @@ LIMIT 5;
 SELECT
 	Job_Applicant_ID,
 	First_Name,
-    Last_Name
+    Last_Name,
+    SQL_,
+    Tableau,
+    Python
 FROM Job_Seekers
 WHERE NOT (SQL_ = "YES") and NOT (Tableau = "YES") and NOT (Python = "YES");
 -- Alternate Query
@@ -112,9 +115,6 @@ DESCRIBE Job_Seekers;
 DESCRIBE Job_Applications;
 
 -- 11. "CHALLENGE"
-
-
-
 -- 12. Which job candidates has 4th to 10th most experience points? HR wants people who has experience but not too much experience.
 
 SELECT
@@ -126,10 +126,52 @@ ORDER BY EX DESC
 Limit 7
 OFFSET 3;
 
--- 13. 
--- 14. "CHALLENGE"
--- 15. 
--- 16. 
+-- 13. How can you find duplicate datas? Job Seekers are wondering how many employers has more than one analytics job opening.
+
+SELECT
+Employer,
+COUNT(Employer)
+FROM Job_Boards
+GROUP BY Employer
+HAVING COUNT(Employer) > 1; 
+
+-- 14. "CHALLENGE" How can HR know which job seeker has applied more than one job application? The company and hiring manager would like to know which candiate is serious with the organization.
+
+SELECT 
+    Job_Applicant_ID, 
+    First_name, 
+    Last_Name
+FROM Job_Seekers
+WHERE Job_Applicant_ID IN (SELECT 
+								Job_Applicant_ID
+							FROM Job_Applications
+							GROUP BY Job_Applicant_ID
+							HAVING COUNT(Job_Applicant_ID) > 1);
+
+-- 15. Can you count the number of job listings that is less or equal than ANY of the 60000 salary job listings? There are job seekers who are wondering how many jobs only pays 60000 or less.
+
+SELECT 
+    COUNT(*)
+FROM Job_Boards
+WHERE SALARY <= ANY (SELECT 
+						Salary
+					FROM Job_Boards
+					WHERE Salary <= 60000);
+
+-- 16. Which job seekers has submitted a job application and has been accpeted? Who is moving on in the interview process? Who is likely to be hired on? Who was the most EX? Please don't use a join.
+
+SELECT
+Job_Applicant_ID,
+First_name,
+Last_Name,
+EX
+FROM Job_Seekers
+WHERE Job_Applicant_ID IN (SELECT
+								Job_Applicant_ID
+							FROM Job_Applications
+                            WHERE Application_Status = "Accepted")
+ORDER BY EX DESC;
+
 -- 17. 
 -- 18. "CHALLENGE"
 -- 19. "CHALLENGE"
@@ -137,7 +179,15 @@ OFFSET 3;
 -- 21. 
 -- 22. 
 -- 23. 
--- 24. "CHALLENGE"
+-- 24. "CHALLENGE" How much will the job title salary cost the employer per an hour, if the employee works 40 hours every week out of the year? Before taxes.
+
+SELECT 
+    Employer, 
+    Job_Title, 
+    (Salary) / (52) / (40) AS Hourly_Pay
+FROM Job_Boards
+ORDER BY Hourly_Pay DESC;
+
 -- 25. 
 -- 26. 
 -- 27. "CHALLENGE"
