@@ -44,7 +44,7 @@ SELECT
         FROM
             job_boards) * 100.0 AS 'Tableau';
 
--- 04. Can you query job title and salary that is equal or greater than $80,000? Can you also add an aggregate functions and filter by job titles that has more than twenty counts? Some job seekers has a minimum salary expectation due to their bills.
+-- 04. Can you query job title and salary that is equal or greater than $80,000? Can you also add an aggregate functions and filter by job titles that has more than twenty counts? Some job seekers only wants the highest paying salary with the most job title counts.
 
 SELECT 
     Job_title, 
@@ -172,13 +172,55 @@ WHERE Job_Applicant_ID IN (SELECT
                             WHERE Application_Status = "Accepted")
 ORDER BY EX DESC;
 
--- 17. 
+-- 17. How can you help HR know which application_Status is being allowed "Under consideration" and "Status denied"? Both employer and employee must know who is moving on and who is not. 
+
+SELECT 
+Job_ID,
+Job_Applicant_ID,
+Application_Status,
+IF(Application_Status = "Accepted", "Under Consideration", "Status denied") AS Job_Update
+FROM Job_Applications;
+
 -- 18. "CHALLENGE"
 -- 19. "CHALLENGE"
 -- 20. "CHALLENGE"
--- 21. 
--- 22. 
+-- 21. How can you tell which Industry has competitive pay on the job market? Aspiring young shareholders wish to know which industry pay is low, mid, or excellent.
+
+SELECT
+Industry,
+Salary,
+CASE
+	WHEN Salary <= 60000 THEN "Low Pay"
+	WHEN Salary >= 80000 THEN "Excellent Pay"
+	Else "Mid Pay"
+END AS "Competitive pay"
+From Job_Boards;
+-- Alternate Query
+SELECT
+Industry,
+Salary,
+CASE
+	WHEN Salary BETWEEN 00001 AND 60000 THEN "Low Pay"
+    WHEN Salary BETWEEN 60001 AND 79999 THEN  "Mid Pay"
+	WHEN Salary >= 80000 THEN "Excellent Pay"
+END AS "Competitive pay"
+From Job_Boards;
+
+-- 22. How can you break down job seeker's education level into years of education based on their degree? Employers wants to know how many years of school each job candidate went to.
+
+SELECT
+Education_Level,
+CASE
+	WHEN Education_Level = "Associate" THEN "2 Year Education"
+	WHEN Education_Level = "Bachelor's" THEN "4 Year Education"
+    WHEN Education_Level = "Master's" THEN "6 Year Education"
+    END AS Years_of_School
+FROM Job_Seekers;
+
 -- 23. 
+
+
+
 -- 24. "CHALLENGE" How much will the job title salary cost the employer per an hour, if the employee works 40 hours every week out of the year? Before taxes.
 
 SELECT 
