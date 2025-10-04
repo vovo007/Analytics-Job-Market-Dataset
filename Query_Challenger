@@ -105,7 +105,7 @@ WHERE NOT SQL_ IN ("YES") and NOT Tableau IN ("YES") and NOT Python IN ("YES");
 -- 09. What clause allows SQL to result in one unique value? HR would like a list of every unique employer.
 
 SELECT
-DISTINCT Employer
+	DISTINCT Employer
 FROM Job_Boards;
 
 -- 10. How can you check the data types of each column in a table? 
@@ -129,8 +129,8 @@ OFFSET 3;
 -- 13. How can you find duplicate datas? Job Seekers are wondering how many employers has more than one analytics job opening.
 
 SELECT
-Employer,
-COUNT(Employer)
+	Employer,
+	COUNT(Employer)
 FROM Job_Boards
 GROUP BY Employer
 HAVING COUNT(Employer) > 1; 
@@ -161,10 +161,10 @@ WHERE SALARY <= ANY (SELECT
 -- 16. Which job seekers has submitted a job application and has been accpeted? Who is moving on in the interview process? Who is likely to be hired on? Who was the most EX? Please don't use a join.
 
 SELECT
-Job_Applicant_ID,
-First_name,
-Last_Name,
-EX
+	Job_Applicant_ID,
+	First_name,
+	Last_Name,
+	EX
 FROM Job_Seekers
 WHERE Job_Applicant_ID IN (SELECT
 								Job_Applicant_ID
@@ -175,10 +175,10 @@ ORDER BY EX DESC;
 -- 17. How can you help HR know which application_Status is being allowed "Under consideration" and "Status denied"? Both employer and employee must know who is moving on and who is not. 
 
 SELECT 
-Job_ID,
-Job_Applicant_ID,
-Application_Status,
-IF(Application_Status = "Accepted", "Under Consideration", "Status denied") AS Job_Update
+	Job_ID,
+	Job_Applicant_ID,
+	Application_Status,
+	IF(Application_Status = "Accepted", "Under Consideration", "Status denied") AS Job_Update
 FROM Job_Applications;
 
 -- 18. "CHALLENGE"
@@ -187,39 +187,41 @@ FROM Job_Applications;
 -- 21. How can you tell which Industry has competitive pay on the job market? Aspiring young shareholders wish to know which industry pay is low, mid, or excellent.
 
 SELECT
-Industry,
-Salary,
-CASE
-	WHEN Salary <= 60000 THEN "Low Pay"
-	WHEN Salary >= 80000 THEN "Excellent Pay"
-	Else "Mid Pay"
-END AS "Competitive pay"
+	Industry,
+	Salary,
+	CASE
+		WHEN Salary <= 60000 THEN "Low Pay"
+		WHEN Salary >= 80000 THEN "Excellent Pay"
+		Else "Mid Pay"
+	END AS "Competitive pay"
 From Job_Boards;
 -- Alternate Query
 SELECT
-Industry,
-Salary,
-CASE
-	WHEN Salary BETWEEN 00001 AND 60000 THEN "Low Pay"
-    WHEN Salary BETWEEN 60001 AND 79999 THEN  "Mid Pay"
-	WHEN Salary >= 80000 THEN "Excellent Pay"
-END AS "Competitive pay"
+	Industry,
+	Salary,
+	CASE
+		WHEN Salary BETWEEN 00001 AND 60000 THEN "Low Pay"
+		WHEN Salary BETWEEN 60001 AND 79999 THEN  "Mid Pay"
+		WHEN Salary >= 80000 THEN "Excellent Pay"
+	END AS "Competitive pay"
 From Job_Boards;
 
 -- 22. How can you break down job seeker's education level into years of education based on their degree? Employers wants to know how many years of school each job candidate went to.
 
 SELECT
-Education_Level,
-CASE
-	WHEN Education_Level = "Associate" THEN "2 Year Education"
-	WHEN Education_Level = "Bachelor's" THEN "4 Year Education"
-    WHEN Education_Level = "Master's" THEN "6 Year Education"
-    END AS Years_of_School
+	Education_Level,
+	CASE
+		WHEN Education_Level = "Associate" THEN "2 Year Education"
+		WHEN Education_Level = "Bachelor's" THEN "4 Year Education"
+		WHEN Education_Level = "Master's" THEN "6 Year Education"
+	END AS Years_of_School
 FROM Job_Seekers;
 
--- 23. 
+-- 23. How can you combine multiple string values into a single column? Your manager needed a few columns fused together into one to make name tags for an upcoming interview event.
 
-
+SELECT
+	CONCAT(First_Name, " ", Last_Name) AS Full_Name
+FROM Job_Seekers;
 
 -- 24. "CHALLENGE" How much will the job title salary cost the employer per an hour, if the employee works 40 hours every week out of the year? Before taxes.
 
@@ -230,9 +232,37 @@ SELECT
 FROM Job_Boards
 ORDER BY Hourly_Pay DESC;
 
--- 25. 
--- 26. 
+-- 25. What is the character count includes the blank spaces found inside any columns? One of the shareholders wants to know the length of when you combine columns.
+
+SELECT
+	CONCAT(First_Name, " ", Last_Name) AS Full_Name,
+    LENGTH(CONCAT(First_Name, " ", Last_Name)) AS Character_Value_Count
+FROM Job_Seekers;
+
+-- 26. How can you find strings with curtrain characters? Your boss has requested a list of characters that ends with "'s" in the education level column along with first & last names.
+
+SELECT
+	First_Name,
+	Last_Name,
+	Education_Level
+FROM Job_Seekers
+WHERE Education_Level LIKE "%'S";
+
 -- 27. "CHALLENGE"
--- 28. 
--- 29. 
+-- 28. How can you replace specified character patterns with new characters patterns? A shareholder from the staffing and recruiting department has noticed an error in the industry column where "Financial Services" should be replaced with "Finance".
+
+SELECT
+	Industry,
+    REPLACE(Industry, "Financial Services", "Finance") AS Industry
+FROM Job_Boards;
+
+-- 29. Which SQL database platform is most popular with employers? Job seekers are wondering which SQL platform they should learn to have the best chance of landing a data job.
+
+SELECT
+	SQL_Server,
+    COUNT(SQL_Server)
+FROM Job_Boards
+GROUP BY SQL_Server
+ORDER BY COUNT(SQL_Server) DESC;
+
 -- 30. "CHALLENGE"
