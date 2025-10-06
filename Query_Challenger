@@ -265,4 +265,55 @@ FROM Job_Boards
 GROUP BY SQL_Server
 ORDER BY COUNT(SQL_Server) DESC;
 
--- 30. "CHALLENGE"
+-- 30. "CHALLENGE" How many job listing has remote, hybrid, or onsite? Provide percentages and count of jobs. Job seekers are wondering the working locations for analytics job market.
+
+SELECT
+	(SELECT 
+            COUNT(remote)
+        FROM
+            job_boards
+        WHERE
+            remote = 'X') / (SELECT 
+            COUNT(remote)
+        FROM
+            job_boards) * 100.0 AS 'remote',
+		(SELECT 
+            COUNT(hybrid)
+        FROM
+            job_boards
+        WHERE
+            hybrid = 'X') / (SELECT 
+            COUNT(hybrid)
+        FROM
+            job_boards) * 100.0 AS 'hybrid',
+		(SELECT 
+            COUNT(onsite)
+        FROM
+            job_boards
+        WHERE
+            onsite = 'X') / (SELECT 
+            COUNT(onsite)
+        FROM
+            job_boards) * 100.0 AS 'onsite'
+
+UNION
+
+SELECT
+	(SELECT
+		CEILING(COUNT(remote))
+		FROM
+			job_boards
+		WHERE
+			remote = 'X') AS 'remote',
+	(SELECT
+		CEILING(COUNT(hybrid))
+		FROM
+			job_boards
+		WHERE
+			hybrid = 'X') AS 'hybrid',
+	(SELECT
+		CEILING(COUNT(onsite))
+		FROM
+			job_boards
+		WHERE
+			onsite = 'X') AS 'onsite';
