@@ -114,7 +114,14 @@ DESCRIBE Job_Boards;
 DESCRIBE Job_Seekers;
 DESCRIBE Job_Applications;
 
--- 11. "CHALLENGE"
+-- 11. What is the max salary for each job title? Job seekers are asking what is the highest salary possible per job title.
+
+SELECT
+	Job_Title,
+    MAX(Salary)
+FROM Job_Boards
+GROUP BY Job_Title;
+
 -- 12. Which job candidates has 4th to 10th most experience points? HR wants people who has experience but not too much experience.
 
 SELECT
@@ -181,10 +188,15 @@ SELECT
 	IF(Application_Status = "Accepted", "Under Consideration", "Status denied") AS Job_Update
 FROM Job_Applications;
 
--- 18. CITY
+-- 18. Which ten cities has the most analytics jobs wihtin USA? Job seekers wants to know which cities has the best chance of landing a analytics job.
 
-
-
+SELECT
+	City,
+    COUNT(City)
+FROM Job_Boards
+GROUP BY City
+ORDER BY COUNT(City) DESC
+LIMIT 10;
 
 -- 19. "CHALLENGE" Who is the first 50% of job candidates that filled out a job application? Display Job_ID, First_Name, & Last_Name columns.
 
@@ -270,7 +282,7 @@ SELECT
 FROM Job_Seekers
 WHERE Education_Level LIKE "%'S";
 
--- 27. "CHALLENGE" Can you write a query to find average salary for each job title, exluding the max salary job title? The top salary data is too high to compared to the rest of salary data.
+-- 27. "CHALLENGE" Can you write a query to find average salary for each job title, exluding the max salary job title? The top salary data is too high to compared to the rest of the salary data jobs.
 
 SELECT
 	Job_Title,
