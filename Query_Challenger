@@ -181,10 +181,32 @@ SELECT
 	IF(Application_Status = "Accepted", "Under Consideration", "Status denied") AS Job_Update
 FROM Job_Applications;
 
--- 18. "CHALLENGE"
--- 19. "CHALLENGE"
--- 20. "CHALLENGE"
--- 21. How can you tell which Industry has competitive pay on the job market? Aspiring young shareholders wish to know which industry pay is low, mid, or excellent.
+-- 18. CITY
+
+
+
+
+-- 19. "CHALLENGE" Who is the first 50% of job candidates that filled out a job application? Display Job_ID, First_Name, & Last_Name columns.
+
+SELECT
+	Job_ID,
+    First_Name,
+    Last_Name
+FROM Job_Applications AS JA
+JOIN Job_Seekers AS JS ON JA.Job_Applicant_ID = JS.Job_Applicant_ID
+WHERE Job_ID >= (SELECT
+					COUNT(*) / 2
+				FROM Job_Applications);
+
+-- 20. "CHALLENGE" If each job title were filled, what is the yearly salary cost in payroll for each employer? Employers wants to budget payroll and wants to see how much analytics would cost the company yearly.
+
+SELECT
+	Employer,
+    SUM(Salary) AS Yearly_Payroll_Cost
+FROM Job_Boards
+GROUP BY Employer;
+
+-- 21. How can you tell which industry has competitive pay on the job market? Aspiring young shareholders wish to know which industry pay is low, mid, or excellent.
 
 SELECT
 	Industry,
@@ -248,7 +270,20 @@ SELECT
 FROM Job_Seekers
 WHERE Education_Level LIKE "%'S";
 
--- 27. "CHALLENGE"
+-- 27. "CHALLENGE" Can you write a query to find average salary for each job title, exluding the max salary job title? The top salary data is too high to compared to the rest of salary data.
+
+SELECT
+	Job_Title,
+    AVG(Salary) AS Average_Salary_Except_MAX
+FROM (SELECT
+			Job_Title,
+            Salary
+		FROM Job_Boards
+        WHERE Salary <= (SELECT
+								MAX(Salary) 
+						FROM Job_Boards) / 2) AS Subquery
+GROUP BY Job_Title;
+
 -- 28. How can you replace specified character patterns with new characters patterns? A shareholder from the staffing and recruiting department has noticed an error in the industry column where "Financial Services" should be replaced with "Finance".
 
 SELECT
