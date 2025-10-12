@@ -21,5 +21,4 @@ This data analytics github porfolio is based on real world data found from the j
 
 Thanks for stopping by:
 
-
 ![](images/tux.png)
