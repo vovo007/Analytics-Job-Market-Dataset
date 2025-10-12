@@ -18,3 +18,6 @@ This data analytics github porfolio is based on real world data found from the j
 ### [Project: Data Analytics Job Market - Dashboard](https://public.tableau.com/app/profile/nhut.vo4927/viz/RealAnalytics_17510476448520/USAAnalyticsJobMarket)
 
 ### [Project: Data Analytics Job Market - Google Sheets](https://docs.google.com/spreadsheets/d/1p8cdtake38t07ErRhz5fYOtItuZ23IgeSD8Sdozfn34/edit?gid=0#gid=0)
+
+Thanks for stopping by
+![Tux, the Linux mascot](/assets/images/tux.png)
