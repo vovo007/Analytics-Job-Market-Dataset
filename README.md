@@ -9,15 +9,15 @@ This data analytics github porfolio is based on real world data found from the j
 * 
 * 
 
-> **Project: Data Analytics Job Market**
+>## **Project: Data Analytics Job Market**
 
-### [- CREATE Database & Tables](https://github.com/vovo007/SQL-Analytics-Job-Market-Dataset/blob/main/Create_Database%26Table)
+#### [- CREATE Database & Tables](https://github.com/vovo007/SQL-Analytics-Job-Market-Dataset/blob/main/Create_Database%26Table)
 
-### [- SQL Practice Problems](https://github.com/vovo007/SQL-Analytics-Job-Market-Dataset/blob/main/Query_Challenger)
+#### [- SQL Practice Problems](https://github.com/vovo007/SQL-Analytics-Job-Market-Dataset/blob/main/Query_Challenger)
 
-### [- Data Visualization Dashboard](https://public.tableau.com/app/profile/nhut.vo4927/viz/RealAnalytics_17510476448520/USAAnalyticsJobMarket)
+#### [- Data Visualization Dashboard](https://public.tableau.com/app/profile/nhut.vo4927/viz/RealAnalytics_17510476448520/USAAnalyticsJobMarket)
 
-### [- Google Sheets Spreadsheet](https://docs.google.com/spreadsheets/d/1p8cdtake38t07ErRhz5fYOtItuZ23IgeSD8Sdozfn34/edit?gid=0#gid=0)
+#### [- Google Sheets Spreadsheet](https://docs.google.com/spreadsheets/d/1p8cdtake38t07ErRhz5fYOtItuZ23IgeSD8Sdozfn34/edit?gid=0#gid=0)
 
 Thanks for stopping by:
 
