@@ -1,4 +1,4 @@
-# Analyst-Job-Dataset
+# Nhut Vo's Github Portfolio - Analyst-Job-Dataset  
 
 Hello everyone,
 
@@ -9,9 +9,9 @@ This data analytics github porfolio is based on real world data found from the j
 * 
 * 
 
-> Testing test test - Project: Data Analytics Job Market
+> **Project: Data Analytics Job Market**
 
-
+(<br>)
 
 ### [Project: Data Analytics Job Market - Dashboard](https://public.tableau.com/app/profile/nhut.vo4927/viz/RealAnalytics_17510476448520/USAAnalyticsJobMarket)
 
