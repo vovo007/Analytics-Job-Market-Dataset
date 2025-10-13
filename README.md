@@ -6,8 +6,9 @@ This data analytics github porfolio is based on real world data found from the j
 
 * Collected real world data and transformed them into meaningful insights
 * Stored the data found into an relational database platform
-* 
-* Turned data into tables, charts, graphs, and dashboards so shareholders may visualize my findings
+* KPIs
+* Analyzed 
+* Turned data into tables, charts, graphs, and dashboards to share with stakeholders my data visualization findings
 
 >## **Project: Data Analytics Job Market**
 
@@ -17,7 +18,7 @@ This data analytics github porfolio is based on real world data found from the j
 
 #### [Tableau - Data Visualization Dashboard](https://public.tableau.com/app/profile/nhut.vo4927/viz/RealAnalytics_17510476448520/USAAnalyticsJobMarket)
 
-#### [Google Sheets - Spreadsheet](https://docs.google.com/spreadsheets/d/1p8cdtake38t07ErRhz5fYOtItuZ23IgeSD8Sdozfn34/edit?gid=0#gid=0)
+#### [Google Sheets - Descriptive Statistics Spreadsheet](https://docs.google.com/spreadsheets/d/1p8cdtake38t07ErRhz5fYOtItuZ23IgeSD8Sdozfn34/edit?gid=0#gid=0)
 
 Thanks for stopping by:
 
