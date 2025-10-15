@@ -6,7 +6,7 @@ This data analytics github porfolio is based on real world data found from the j
 
 * Collected real world data and transformed them into meaningful insights
 * Used key performance indicators (KPIs) to measure the performance of our organization
-* Analyzed clean data to conclude the best insights 
+* Analyzed clean data to solve business problems and point out key insights best for business decision
 * Turned data into tables, charts, graphs, and dashboards to share with stakeholders my data visualization findings
 
 >## **Project: Data Analytics Job Market**
