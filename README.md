@@ -17,7 +17,7 @@ This data analytics github porfolio is based on real world data found from the j
 
 #### [Tableau - The Analytics Job Market Dashboard](https://public.tableau.com/app/profile/nhut.vo4927/viz/RealAnalytics_17510476448520/USAAnalyticsJobMarket)
 
-#### [Google Sheets - Descriptive Statistics Spreadsheet](https://docs.google.com/spreadsheets/d/1p8cdtake38t07ErRhz5fYOtItuZ23IgeSD8Sdozfn34/edit?gid=0#gid=0)
+#### [Google Sheets - Descriptive Statistics Spreadsheet of Job ](https://docs.google.com/spreadsheets/d/1aMNPwsyd4bShYQ5i-sCUdZC9Ooc08vARtZB10GSquRE/edit?usp=sharing)
 
 Thanks for stopping by:
 
