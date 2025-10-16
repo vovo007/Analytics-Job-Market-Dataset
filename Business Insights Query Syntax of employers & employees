@@ -1,13 +1,13 @@
 /*
 
-Hello shareholders,
+Hello stakeholders,
 
-Welcome to my Github repository about SQL. Here shareholders that view my Github account can see my queries pulling
+Welcome to my Github repository about SQL. Here stakeholders that view my Github account can see my queries pulling
 data from SQL relational databases. 
 
 */
 
--- 01. Can you show your shareholders all data from one of the tables in Analytics_Job_Market database?
+-- 01. Can you show your stakeholders all data from one of the tables in Analytics_Job_Market database?
 
 SELECT 
     *
@@ -218,7 +218,7 @@ SELECT
 FROM Job_Boards
 GROUP BY Employer;
 
--- 21. How can you tell which industry has competitive pay on the job market? Aspiring young shareholders wish to know which industry pay is low, mid, or excellent.
+-- 21. How can you tell which industry has competitive pay on the job market? Aspiring young stakeholders wish to know which industry pay is low, mid, or excellent.
 
 SELECT
 	Industry,
@@ -266,7 +266,7 @@ SELECT
 FROM Job_Boards
 ORDER BY Hourly_Pay DESC;
 
--- 25. What is the character count includes the blank spaces found inside any columns? One of the shareholders wants to know the length of when you combine columns.
+-- 25. What is the character count includes the blank spaces found inside any columns? One of the stakeholders wants to know the length of when you combine columns.
 
 SELECT
 	CONCAT(First_Name, " ", Last_Name) AS Full_Name,
