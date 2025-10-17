@@ -13,7 +13,7 @@ This data analytics github porfolio is based on real world data found from the j
 
 ## **Business Problem:**
 
-Employers and job seekers are having difficult time finding the right match for each other. Imagine the job market is like using a dating app, two potential partners are trying to find the perfect match for each other. As an analyst, we must find something in the data that both sides needs from each other. One side needs employees, while the other side needs an employer, but both parties must find chemistry from the other to be successful. 
+Employers and job seekers are having a difficult time finding the right match for each other. Imagine the job market is like using a dating app, two potential partners are trying to find the perfect match for each other. As an analyst, we must find insight in the data that both sides needs from each other. One side needs employees, while the other side needs an employer, but both parties must find chemistry from the other to be successful. That is where we analysts comes in, 
 
 >## **Project: Data Analytics Job Market**
 
