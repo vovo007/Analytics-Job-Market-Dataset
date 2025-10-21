@@ -17,7 +17,9 @@ Employers and job seekers are having a difficult time finding the right match fo
 
 ## **Methodology:**
 
-1.
+1. Top SQL skills job seekers should have for the analytics job market.
+2. 
+3. 
 
 >## **Project: Data Analytics Job Market**
 
