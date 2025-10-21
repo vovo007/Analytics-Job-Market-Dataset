@@ -40,4 +40,4 @@ Employers and job seekers are having a difficult time finding the right match fo
 
 Thanks for stopping by:
 
-![](images/tux.png)
+![yes](images/tux.png)
