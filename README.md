@@ -25,7 +25,7 @@ Employers and job seekers are having a difficult time finding the right match fo
 
 #### [SQL - Relational Database Creation](https://github.com/vovo007/Analytics-Job-Market-Dataset/blob/main/Relational%20Database%20Creation)
 
-#### [SQL - Business Insights Query Syntax of Employers & Employees](https://github.com/vovo007/SQL-Analytics-Job-Market-Dataset/blob/main/Query_Challenger)
+#### [SQL - Business Insights Query Syntax of Employers & Employees](https://github.com/vovo007/Analytics-Job-Market-Dataset/blob/main/Business%20Insights%20Query%20Syntax%20of%20employers%20%26%20employees)
 
 #### [Tableau - The Analytics Job Market Dashboard](https://public.tableau.com/app/profile/nhut.vo4927/viz/RealAnalytics_17510476448520/USAAnalyticsJobMarket)
 
