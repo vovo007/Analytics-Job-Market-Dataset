@@ -26,9 +26,9 @@ Employers and job seekers are having a difficult time finding the right match fo
 
 ## **Exploratory Data Analysis (EDA):**
 
-> test
-> test
-> test
+-
+- 
+-
 
 >## **Project: Data Analytics Job Market**
 
