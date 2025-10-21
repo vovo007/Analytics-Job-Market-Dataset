@@ -26,10 +26,11 @@ Employers and job seekers are having a difficult time finding the right match fo
 
 ## **Exploratory Data Analysis (EDA):**
 
-* 
-* 
-* 
-* 
+* Problem solving - 
+* Investigation - 
+* Visualizing data - 
+* Inisghts -
+* Stakeholders - 
 
 >## **Project: Data Analytics Job Market**
 
