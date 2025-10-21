@@ -17,9 +17,13 @@ Employers and job seekers are having a difficult time finding the right match fo
 
 ## **Methodology:**
 
-1. Top SQL skills job seekers should have for the analytics job market.
-2. 
-3. 
+1. Top SQL skills job seekers needs to match the employer's requirements.
+2. Which data visualization tool is more pupular with employers? Tableau or Power BI?
+3. Job seekers needs to know the average salary in the U.S. that employers are willing to pay for analytics jobs.
+
+## **Exploratory Data Analysis (EDA):**
+
+
 
 >## **Project: Data Analytics Job Market**
 
