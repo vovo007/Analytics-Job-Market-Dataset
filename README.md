@@ -26,6 +26,11 @@ Employers and job seekers are having a difficult time finding the right match fo
 
 ## **Exploratory Data Analysis (EDA):**
 
+* 
+* 
+* 
+* 
+
 >## **Project: Data Analytics Job Market**
 
 #### [SQL - Relational Database Creation](https://github.com/vovo007/Analytics-Job-Market-Dataset/blob/main/Relational%20Database%20Creation)
