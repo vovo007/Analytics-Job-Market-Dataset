@@ -1,3 +1,14 @@
+/*
+
+Hello stakeholders,
+
+In this SQL repository, I've created this analytics job market dataset to stored all the data found through various 
+job boards. I improved this relational database through 1nf to 3nf normalization standards. Made sure all columns has
+the correct data types associated with values. Connceted primary keys to foreign keys. 
+
+
+*/
+
 DROP DATABASE IF EXISTS `Analytics_Job_Market`;
 CREATE DATABASE `Analytics_Job_Market`; 
 USE `Analytics_Job_Market`;
