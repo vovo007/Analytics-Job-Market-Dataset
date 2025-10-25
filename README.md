@@ -28,7 +28,7 @@ Employers and job seekers are having a difficult time finding the right match fo
 
 * Business Question/Problem - 
 * Data Collection & Storage - 
-* Data Analysis Insights- 
+* Data Analysis Insights - 
 * Data Visualization & Storytelling - 
 * Business Decisions - 
 
