@@ -27,9 +27,9 @@ Employers and job seekers are having a difficult time finding the right match fo
 ## **Exploratory Data Analysis (EDA):**
 
 * Business Question/Problem - Exploration of data through descriptive analysis answering stahkeholders questions and solving business problems.
-* Data Collection & Storage - data wrangling is the process of investigating data to discover patterns, spot abnormalities, check assumptions & store cleaned data
-* Data Analysis Insights - Offers many possibilities for data analysis through the insights gathered from the dataset
-* Data Visualization & Storytelling - Summarize the values within our data using visual representations and clear story presentation to the stakeholders.
+* Data Collection & Storage - Investigating data to discover patterns, spot abnormalities, check assumptions, and store cleaned data into relational database.
+* Data Analysis Insights - Explore the many possibilities for data analysis through the insights gathered from the collected dataset.
+* Data Visualization & Storytelling - Summarize the values within our data using visual representations and clear story presentation to the audience.
 * Business Decisions - Understand the business, stakeholders, and data to make impactful decisions best suited for the company.
 
 >## **Project: Data Analytics Job Market**
